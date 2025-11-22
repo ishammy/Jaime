@@ -20,6 +20,7 @@
                         pureGreen: '#006400',
                         pureGold: '#F2A900',
                         errorRed: '#dc2626',
+                        lightGreen: '#4ade80',
                     },
                     fontFamily: { sans: ['Segoe UI', 'sans-serif'] }
                 }
@@ -251,17 +252,30 @@
                 <div id="promo-container" class="flex gap-4 overflow-x-auto pb-4 no-scrollbar"></div>
             </div>
 
-            <!-- How To Use Tutorial -->
+            <!-- How To Use Tutorial (Horizontal) -->
             <div class="mt-8">
-                <h3 class="font-bold text-gray-800 mb-3">How to use</h3>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-4 bg-gray-50 p-3 rounded-xl border border-gray-100">
-                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-pureGreen"><i class="fa-solid fa-barcode"></i></div>
-                        <div><h4 class="font-bold text-sm">1. Scan Items</h4><p class="text-xs text-gray-500">Use your camera to verify prices.</p></div>
+                <h3 class="font-bold text-gray-800 mb-4 text-lg">How It Works</h3>
+                <div class="flex justify-around items-start text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center w-1/3">
+                        <div class="w-14 h-14 rounded-full bg-pureGreen flex items-center justify-center text-white text-2xl mb-2 shadow-md transform hover:scale-105 transition">
+                            <i class="fa-solid fa-barcode"></i>
+                        </div>
+                        <p class="font-bold text-xs text-gray-700">1. Scan Items</p>
                     </div>
-                    <div class="flex items-center gap-4 bg-gray-50 p-3 rounded-xl border border-gray-100">
-                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-pureGold"><i class="fa-solid fa-cart-plus"></i></div>
-                        <div><h4 class="font-bold text-sm">2. Add to Cart</h4><p class="text-xs text-gray-500">Build your basket as you go.</p></div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center w-1/3">
+                        <div class="w-14 h-14 rounded-full bg-pureGold flex items-center justify-center text-white text-xl mb-2 shadow-md transform hover:scale-105 transition">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <p class="font-bold text-xs text-gray-700">2. Review Cart</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center w-1/3">
+                        <div class="w-14 h-14 rounded-full bg-lightGreen flex items-center justify-center text-white text-2xl mb-2 shadow-md transform hover:scale-105 transition">
+                            <i class="fa-solid fa-qrcode"></i>
+                        </div>
+                        <p class="font-bold text-xs text-gray-700">3. Pay & Show QR</p>
                     </div>
                 </div>
             </div>
@@ -351,7 +365,7 @@
                 <h2 class="text-xl font-bold">My Cart <span id="cart-total-count" class="text-sm font-normal text-gray-500 ml-1">(0)</span></h2>
                 <div class="w-6"></div>
             </header>
-            <div id="cart-items-container" class="p-4 space-y-3 pb-72"></div>
+            <div id="cart-items-container" class="p-4 space-y-3 pb-80"></div>
             <div class="fixed bottom-20 left-0 w-full bg-white border-t shadow-[0_-5px_20px_rgba(0,0,0,0.05)] p-4 z-20 max-w-[450px] mx-auto">
                 <div class="flex items-center gap-2 mb-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
                     <i class="fa-solid fa-coins text-pureGold"></i>
@@ -383,10 +397,10 @@
                 </div>
             </div>
             <div class="px-6 space-y-3 pb-20">
-                <button onclick="openPaymentModal('GCash')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-blue-500 transition"><img src="placeholder_gcash.png" class="w-10 h-10 object-contain rounded-full bg-gray-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">GCash</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
-                <button onclick="openPaymentModal('Maya')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-green-500 transition"><img src="placeholder_maya.png" class="w-10 h-10 object-contain rounded-full bg-gray-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Maya</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
-                <button onclick="openPaymentModal('Card')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-orange-500 transition"><img src="placeholder_card.png" class="w-10 h-10 object-contain rounded-full bg-gray-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Debit / Credit Card</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
-                <button onclick="openPaymentModal('Cash')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-gray-500 transition"><img src="placeholder_cash.png" class="w-10 h-10 object-contain rounded-full bg-gray-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Cash</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
+                <button onclick="openPaymentModal('GCash')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-blue-500 transition"><img src="https://brandlogos.net/wp-content/uploads/2024/01/gcash-logo_brandlogos.net_kiaqh-512x427.png" class="w-10 h-10 object-contain rounded-full bg-white-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">GCash</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
+                <button onclick="openPaymentModal('Maya')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-green-500 transition"><img src="https://brandlogos.net/wp-content/uploads/2025/03/maya-logo_brandlogos.net_y6kkp.png" class="w-10 h-10 object-contain rounded-full bg-white-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Maya</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
+                <button onclick="openPaymentModal('Card')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-orange-500 transition"><img src="https://cdn-icons-png.flaticon.com/512/6963/6963703.png" class="w-10 h-10 object-contain rounded-full bg-white-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Debit / Credit Card</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
+                <button onclick="openPaymentModal('Cash')" class="w-full bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4 hover:border-gray-500 transition"><img src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-business-acounting-money-logo-vector-cash-logo-background-vector-png-image_37464228.png" class="w-10 h-10 object-contain rounded-full bg-white-100"><div class="text-left flex-1"><h4 class="font-bold text-gray-800">Cash</h4></div><i class="fa-solid fa-chevron-right text-gray-300"></i></button>
             </div>
         </section>
 
@@ -463,11 +477,21 @@
         // --- INIT ---
         window.onload = () => {
             initDB();
-            // Initial routing
-            setTimeout(() => {
-                document.getElementById('splash-screen').classList.add('opacity-0', 'pointer-events-none');
+            // Check if splash screen was already shown in this session
+            const splashShown = sessionStorage.getItem('splashShown');
+            
+            if (!splashShown) {
+                // First time load: Show splash
+                setTimeout(() => {
+                    document.getElementById('splash-screen').classList.add('opacity-0', 'pointer-events-none');
+                    checkSession();
+                    sessionStorage.setItem('splashShown', 'true');
+                }, 2000);
+            } else {
+                // Reload: Skip splash
+                document.getElementById('splash-screen').style.display = 'none';
                 checkSession();
-            }, 2000);
+            }
         };
 
         function initDB() {
@@ -476,34 +500,34 @@
             
             // 28 Items with Placeholders
             alasql(`INSERT INTO products VALUES 
-                ('4807788058850', 'Unilab United Home FerSulfate Iron 65mg 100 tablets', 349.00, 'Health & Wellness', 'N/A', 'N/A', 'placeholder_product1.png'),
-                ('4807770270024', 'Lucky Me Instant Noodles Chicken 55g', 9.35, 'Instant Noodles & Pasta', '', '', 'placeholder_product2.png'),
-                ('4800249908848', 'CDO Karne Norte 150g', 28.75, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'placeholder_product3.png'),
-                ('4808888004167', 'Palmolive Naturals Shampoo Intensive Moisture (pink) 15ml', 79.00, 'Hair Care', 'Free Item', 'Buy 11 Get 1 FREE', 'placeholder_product4.png'),
-                ('4801668500286', 'Datu Puti Soy Sauce 385ml', 23.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'placeholder_product5.png'),
-                ('4800888285317', 'DOVE Radiant + Care Serum Bar 50x Niacinamide + Omega 6 90g', 89.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product6.png'),
-                ('4800110099576', 'White King Fiesta Creamy Carbonara 1.4kg', 145.45, 'Instant Noodles & Pasta', 'Bundle Deal', 'Sulit Pack', 'placeholder_product7.png'),
-                ('4800047841712', 'Zonrox Bleach Color Safe Blossom Fresh 450ml', 41.00, 'Laundry Care', 'N/A', 'N/A', 'placeholder_product8.png'),
-                ('4800092331909', 'Ding Dong Hot and Spicy 100g', 22.15, 'Snacks', 'N/A', 'N/A', 'placeholder_product9.png'),
-                ('4800216121911', 'Cheezy Red Hot 22g', 8.20, 'Snacks', 'N/A', 'N/A', 'placeholder_product10.png'),
-                ('4800249006531', 'San Marino Chili Corned Tuna 85 g', 27.00, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'placeholder_product11.png'),
-                ('4902430846424', 'Downy Antibac Kontra Germs 26 ml', 59.00, 'Laundry Care', 'Free Item', 'Buy 6 Get 1 FREE!', 'placeholder_product12.png'),
-                ('4807770273742', 'Lucky Me! Pancit Canton Chilimansi Multipack (80gx6)', 115.00, 'Instant Noodles & Pasta', 'N/A', 'N/A', 'placeholder_product13.png'),
-                ('4800249010091', 'San Marino Chili Corned Tuna 100g', 29.75, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'placeholder_product14.png'),
-                ('4806014001196', 'Good Life Japanese-Style Bread Crumbs 230g', 41.05, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'placeholder_product15.png'),
-                ('4806510070245', 'McCormick Grill Mates Korean BBQ Bulgogi Marinade Mix 45g', 43.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'placeholder_product16.png'),
-                ('4806510070238', 'McCormick Grill Mates Cajun Marinade Mix 45g', 40.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'placeholder_product17.png'),
-                ('4809012902038', 'Facial Wash Whitening Vita', 21.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product18.png'),
-                ('4800326628584', 'Bigen Permanent Powder Hair Color', 75.00, 'Hair Care', 'N/A', 'N/A', 'placeholder_product19.png'),
-                ('4809012902106', 'Whitening Pack Peel-off Mask', 24.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product20.png'),
-                ('4801668100264', 'Mang Tomas All Around Sarsa Regular (325g)', 40.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'placeholder_product21.png'),
-                ('4806518333137', 'BELO Intense White Deo 40Ml', 165.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product22.png'),
-                ('4806539001398', 'SOLA Daily Screen SPF 50+ PA++++ 7ml', 129.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product23.png'),
-                ('4800137365326', 'MAYA The Original Hotcake Mix 500g', 77.00, 'Baking Mixes', 'N/A', 'N/A', 'placeholder_product24.png'),
-                ('4806014000762', 'Jolly Mushroom Whole 400g', 68.00, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'placeholder_product25.png'),
-                ('4801981116171', 'Royal Soft Drink 1.75 L', 85.00, 'Ready-to-Drink Beverages', 'N/A', 'N/A', 'placeholder_product26.png'),
-                ('4800047820182', 'Green Cross Isopropyl Alcohol 70% Solution 500ml', 94.00, 'Health & Hygiene', 'N/A', 'N/A', 'placeholder_product27.png'),
-                ('4800575140370', 'Alaska Evaporada 360ml', 55.00, 'Dairy & Milk', 'N/A', 'N/A', 'placeholder_product28.png')
+                ('4807788058850', 'Unilab United Home FerSulfate Iron 65mg 100 tablets', 349.00, 'Health & Wellness', 'N/A', 'N/A', 'https://assets.unilab.com.ph/uploads/Common/Products/United-Home-Fersulfate-Iron/United_Home_Fersulfate.png'),
+                ('4807770270024', 'Lucky Me Instant Noodles Chicken 55g', 9.35, 'Instant Noodles & Pasta', '', '', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kBrUToO9ZigG9NfqNh59iPamlXUGJKi6Kg&s'),
+                ('4800249908848', 'CDO Karne Norte 150g', 28.75, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'https://images.freshop.ncrcloud.com/1564405684702539926/6104e49b211569587b50b3bd5f32d422_large.png'),
+                ('4808888004167', 'Palmolive Naturals Shampoo Intensive Moisture (pink) 15ml', 79.00, 'Hair Care', 'Free Item', 'Buy 11 Get 1 FREE', 'https://down-ph.img.susercontent.com/file/ph-11134207-7rasf-m333gpousdte56.webp'),
+                ('4801668500286', 'Datu Puti Soy Sauce 385ml', 23.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/bdb6b1e167f7a494e0e0633b6916ee16.webp'),
+                ('4800888285317', 'DOVE Radiant + Care Serum Bar 50x Niacinamide + Omega 6 90g', 89.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://assets.unileversolutions.com/v1/123646780.png'),
+                ('4800110099576', 'White King Fiesta Creamy Carbonara 1.4kg', 145.45, 'Instant Noodles & Pasta', 'Bundle Deal', 'Sulit Pack', 'https://ever.ph/cdn/shop/files/100000093292-Fiesta-Creamy-Carbonara-Sulit-Pack-1.4kg-231020_a2f7e6a5-0046-46e8-8587-5681602ea093.jpg'),
+                ('4800047841712', 'Zonrox Bleach Color Safe Blossom Fresh 450ml', 41.00, 'Laundry Care', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/ph-11134207-7r98z-ltqafqdyky9c66.webp'),
+                ('4800092331909', 'Ding Dong Hot and Spicy 100g', 22.15, 'Snacks', 'N/A', 'N/A', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKrEC0QFt0MNZEttNEx4eZLZDrxRPdywdfhA&s'),
+                ('4800216121911', 'Cheezy Red Hot 22g', 8.20, 'Snacks', 'N/A', 'N/A', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJIGtPXIm2r_aKmZ8_AnT7C8qqnYH79jvOUA&s'),
+                ('4800249006531', 'San Marino Chili Corned Tuna 85 g', 27.00, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/sg-11134275-8257y-mg0vcmu4tdzjd3'),
+                ('4902430846424', 'Downy Antibac Kontra Germs 26 ml', 59.00, 'Laundry Care', 'Free Item', 'Buy 6 Get 1 FREE!', 'https://img.lazcdn.com/g/p/88f4e5437da8e0510102a7d106908adf.jpg_720x720q80.jpg'),
+                ('4807770273742', 'Lucky Me! Pancit Canton Chilimansi Multipack (80gx6)', 115.00, 'Instant Noodles & Pasta', 'N/A', 'N/A', 'https://cdn.mafrservices.com/pim-content/QAT/media/product/322113/1748414403/322113_main.jpg?im=Resize=376'),
+                ('4800249010091', 'San Marino Chili Corned Tuna 100g', 29.75, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'https://ever.ph/cdn/shop/files/100000058654-San-Marino-Chili-Corned-Tuna-100g-210406_c7ec3259-e6ac-45fa-b023-a9d7cf8fd02d.jpg?'),
+                ('4806014001196', 'Good Life Japanese-Style Bread Crumbs 230g', 41.05, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'https://acemarket.ph/cdn/shop/files/FA_GL_Pack_Refresh_Bread_Crumbs_Packshot_230g.png?'),
+                ('4806510070245', 'McCormick Grill Mates Korean BBQ Bulgogi Marinade Mix 45g', 43.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/ph-11134201-7rasj-matd1lf8xfg100.webp'),
+                ('4806510070238', 'McCormick Grill Mates Cajun Marinade Mix 45g', 40.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'https://ph-test-11.slatic.net/p/0c61cd2f5d7bc39a8c4b59ed4711003d.jpg'),
+                ('4809012902038', 'Facial Wash Whitening Vita', 21.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://k2pharmacy.ph/cdn/shop/files/Iwhite_FacialWashWhiteningVita1-fotor-20240621153945_grande.jpg?'),
+                ('4800326628584', 'Bigen Permanent Powder Hair Color', 75.00, 'Hair Care', 'N/A', 'N/A', 'https://medias.watsons.com.ph/publishing/Image%201_10031898%20BIGEN%20PWDR%20HAIR%20DYE%20BROWN%20BLACK-U0sPjsqF-zoom.jpg?'),
+                ('4809012902106', 'Whitening Pack Peel-off Mask', 24.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://iwhitekorea.com.ph/wp-content/uploads/2021/09/WPS1-min-600x600.jpg'),
+                ('4801668100264', 'Mang Tomas All Around Sarsa Regular (325g)', 40.00, 'Seasoning & Cooking Mixes', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/ph-11134201-7r992-lmy8cyn8qumnb2.webp'),
+                ('4806518333137', 'BELO Intense White Deo 40Ml', 165.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/ph-11134211-7qul7-lgbykf4qa1ko6b.webp'),
+                ('4806539001398', 'SOLA Daily Screen SPF 50+ PA++++ 7ml', 129.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://down-ph.img.susercontent.com/file/ph-11134207-7rash-m7a7srot6nw2cf.webp'),
+                ('4800137365326', 'MAYA The Original Hotcake Mix 500g', 77.00, 'Baking Mixes', 'N/A', 'N/A', 'https://order.themayakitchen.com/cdn/shop/products/MAYA_ORIGINAL_HOTCAKE_500G_FRONT_503x503.png?v=1646144596'),
+                ('4806014000762', 'Jolly Mushroom Whole 400g', 68.00, 'Canned Goods & Processed Meat', 'N/A', 'N/A', 'https://acemarket.ph/cdn/shop/products/E-comm-JollyWholeMushrooms-400g_cdd68763-88b3-4d59-978b-34f021d3d7b4.jpg?v=1740979475'),
+                ('4801981116171', 'Royal Soft Drink 1.75 L', 85.00, 'Ready-to-Drink Beverages', 'N/A', 'N/A', 'https://shopsuki.ph/cdn/shop/files/102051443_35dc718e-e62e-4f02-8b28-76a285c015ca_1024x.jpg?v=1757409338'),
+                ('4800047820182', 'Green Cross Isopropyl Alcohol 70% Solution 500ml', 94.00, 'Health & Hygiene', 'N/A', 'N/A', 'https://boholonlinestore.com/wp-content/uploads/2017/01/green_cross_70_isopropyl_alcohol_500ml-1.jpg'),
+                ('4800575140370', 'Alaska Evaporada 360ml', 55.00, 'Dairy & Milk', 'N/A', 'N/A', 'https://ever.ph/cdn/shop/files/9000006742-Alaska-Evaporada-Evaporated-Creamer-360ml-230525_b90b5ac9-e68f-41b7-89bc-16fcc1ea3d09.jpg?v=1762137305')
             `);
             renderPromos();
         }
@@ -711,19 +735,7 @@
 
             if(screenId === 'cart-screen') renderCart();
             if(screenId === 'payment-screen') renderPaymentSummary();
-        }
-
-        // --- PROMOS ---
-        function renderPromos() {
-            const promos = alasql("SELECT * FROM products WHERE promo_type IS NOT NULL AND promo_type != 'N/A' AND promo_type != ''");
-            const container = document.getElementById('promo-container');
-            if (promos.length === 0) { container.innerHTML = '<p class="text-gray-400 text-xs p-2">No active promotions</p>'; return; }
-            container.innerHTML = promos.map(p => `
-                <div class="min-w-[200px] bg-green-50 border border-green-100 p-4 rounded-xl relative shadow-sm flex flex-col justify-between cursor-pointer hover:shadow-md transition" onclick="addItemByCode('${p.product_id}')">
-                    <div class="absolute top-0 right-0 bg-pureGold text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase">${p.promo_type}</div>
-                    <div class="mt-4"><h4 class="font-bold text-gray-800 leading-tight text-sm line-clamp-2">${p.item_name}</h4><p class="text-xs text-pureGreen mt-1 font-semibold">${p.promo_value}</p></div>
-                    <div class="mt-3 flex justify-between items-end"><span class="text-lg font-bold text-gray-900">₱${p.price.toFixed(2)}</span><i class="fa-solid fa-plus-circle text-pureGreen text-xl"></i></div>
-                </div>`).join('');
+            if(screenId === 'history-screen') renderHistoryList();
         }
 
         // --- SCANNER ---
@@ -958,6 +970,21 @@
             const t = calculateTotals();
             const id = "#" + Math.random().toString(36).substr(2, 9).toUpperCase();
             const date = new Date().toLocaleString();
+            const qrString = `PUREGOGO:${id}:${t.finalTotal.toFixed(2)}`;
+
+            // Create transaction object
+            const newTxn = {
+                transactionID: id,
+                dateTime: date,
+                itemsPurchased: [...cart],
+                subtotalVATExclusive: t.netOfVat,
+                VAT12: t.vatAmt,
+                discounts: t.totalPromo,
+                puregoldPointsDeducted: t.points,
+                finalTotal: t.finalTotal,
+                paymentMethod: method,
+                qrCodeData: qrString
+            };
 
             // Update User Logic
             if (currentUser) {
@@ -966,19 +993,7 @@
                     const pointsEarned = Math.floor(t.finalTotal / 200);
                     currentUser.puregoldPoints += pointsEarned;
                 }
-
-                const newTxn = {
-                    transactionID: id,
-                    dateTime: date,
-                    itemsPurchased: [...cart],
-                    subtotalVATExclusive: t.netOfVat,
-                    VAT12: t.vatAmt,
-                    discounts: t.totalPromo,
-                    puregoldPointsDeducted: t.points,
-                    finalTotal: t.finalTotal,
-                    paymentMethod: method,
-                    qrCodeData: `PUREGOGO:${id}:${t.finalTotal.toFixed(2)}`
-                };
+                
                 currentUser.transactionHistory.unshift(newTxn);
                 
                 // Update Users Array
@@ -988,6 +1003,7 @@
                 updateUserUI(); // Refresh UI Points
             }
 
+            // Render Receipt
             document.getElementById('rec-date').innerText = date;
             document.getElementById('rec-id').innerText = id;
             document.getElementById('rec-sub').innerText = `₱${t.subtotalInclusive.toFixed(2)}`;
@@ -1027,6 +1043,19 @@
                 </div>`).join('');
         }
 
+        function renderHistoryListStandalone() {
+            const list = document.getElementById('history-list-standalone');
+            if (!currentUser || !currentUser.transactionHistory || currentUser.transactionHistory.length === 0) {
+                list.innerHTML = '<p class="text-center text-gray-400 py-8 text-sm">No transactions recorded yet.</p>';
+                return;
+            }
+            list.innerHTML = currentUser.transactionHistory.map((txn, idx) => `
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                    <div><h4 class="font-bold text-gray-800">${txn.transactionID}</h4><p class="text-xs text-gray-500">${txn.dateTime}</p><p class="text-xs font-semibold text-pureGreen mt-1">₱${txn.finalTotal.toFixed(2)} • ${txn.paymentMethod}</p></div>
+                    <button onclick="openHistoryDetails(${idx})" class="text-xs bg-gray-100 text-gray-600 px-3 py-2 rounded-lg font-bold hover:bg-gray-200">View Details</button>
+                </div>`).join('');
+        }
+
         function openHistoryDetails(idx) {
             const txn = currentUser.transactionHistory[idx];
             if(!txn) return;
@@ -1048,7 +1077,7 @@
                     <div class="flex justify-between mt-1"><span>Payment</span> <span class="font-bold">${txn.paymentMethod}</span></div>
                 </div>
                 <div class="text-center mt-8"><div id="hist-qrcode-${idx}" class="inline-block p-2 border-4 border-gray-200 rounded-xl"></div><p class="text-xs text-gray-400 mt-2">Original Receipt QR</p></div>
-                <button onclick="navTo('profile-screen')" class="w-full mt-8 border border-gray-300 text-gray-500 py-3 rounded-xl font-bold hover:bg-gray-50">Back to Profile</button>`;
+                <button onclick="navTo('history-screen')" class="w-full mt-8 border border-gray-300 text-gray-500 py-3 rounded-xl font-bold hover:bg-gray-50">Back to History</button>`;
             navTo('history-details-screen');
             setTimeout(() => { new QRCode(document.getElementById(`hist-qrcode-${idx}`), { text: txn.qrCodeData, width: 120, height: 120, colorDark : "#333333", colorLight : "#ffffff" }); }, 100);
         }
@@ -1059,6 +1088,16 @@
             document.getElementById('toast-text').innerText = msg;
             document.getElementById('toast-text').parentElement.className = `absolute top-5 left-1/2 -translate-x-1/2 px-6 py-3 rounded-full shadow-xl font-bold text-sm transition-transform transform z-[100] flex items-center gap-2 ${error ? 'bg-red-500 text-white' : 'bg-pureGreen text-white'}`;
             t.classList.remove('-translate-y-24'); setTimeout(() => t.classList.add('-translate-y-24'), 3000);
+        }
+
+        function clearHistory() {
+            if(!currentUser) return;
+            if(confirm("Clear all transaction history?")) {
+                currentUser.transactionHistory = [];
+                saveUsers();
+                renderHistoryList();
+                renderHistoryListStandalone();
+            }
         }
     </script>
 </body>
